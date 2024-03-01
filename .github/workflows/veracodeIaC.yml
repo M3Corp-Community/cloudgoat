@@ -19,5 +19,7 @@ jobs:
             $subfolder = Get-ChildItem -Path ./scenarios -Directory
             foreach ($subpasta in $subfolder) {
                 $folderName = $subpasta.FullName
+                Write-Host "Work in scenario: $subpasta.Name ---------------------------------------------------------------------"
                 ./veracode scan --type directory --source $folderName --format table
+                Write-Host "...."
             }
