@@ -1,6 +1,6 @@
 name: Veracode_Expert
 on:
-  push
+  workflow_dispatch:
 
 jobs:
   Package:

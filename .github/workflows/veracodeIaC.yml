@@ -15,6 +15,7 @@ jobs:
           VERACODE_API_KEY_ID: ${{ secrets.VeracodeID }} # Lembrar de criar as credenciais no Secrets
           VERACODE_API_KEY_SECRET: ${{ secrets.VeracodeKey }}
         run: |
+            ls
             $subfolder = Get-ChildItem -Path ./scenarios -Directory
             foreach ($subpasta in $subfolder) {
                 $folderName = $subpasta.FullName
